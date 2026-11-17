@@ -44,28 +44,25 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-[#070b17] py-24">
-      <div className="mx-auto max-w-7xl px-8">
-        {/* Section Heading */}
-        <div className="mb-16 text-center">
-          <h2 className="text-5xl font-bold">
+    <section id="projects" className="bg-[#070b17] py-20 sm:py-24">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="mb-12 text-center sm:mb-16">
+          <h2 className="text-4xl font-bold sm:text-5xl">
             My <span className="text-violet-500">Projects</span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-gray-400">
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-gray-400 sm:text-base">
             A collection of projects where I transform ideas into
             practical applications through technology and creativity.
           </p>
         </div>
 
-        {/* Project Cards */}
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
           {projects.map((project) => (
             <div
               key={project.number}
-              className="group rounded-3xl border border-white/10 bg-white/[0.04] p-8 transition duration-300 hover:-translate-y-2 hover:border-violet-500/60 hover:shadow-[0_0_35px_rgba(139,92,246,0.12)]"
+              className="group flex h-full flex-col rounded-3xl border border-white/10 bg-white/[0.04] p-5 transition duration-300 hover:-translate-y-1 hover:border-violet-500/60 sm:p-8"
             >
-              {/* Number and Status */}
               <div className="mb-6 flex items-center justify-between">
                 <span className="text-4xl font-black text-violet-500/40">
                   {project.number}
@@ -82,8 +79,7 @@ export default function Projects() {
                 </span>
               </div>
 
-              {/* Project Title */}
-              <h3 className="text-2xl font-bold transition group-hover:text-violet-400">
+              <h3 className="text-xl font-bold transition group-hover:text-violet-400 sm:text-2xl">
                 {project.title}
               </h3>
 
@@ -91,12 +87,10 @@ export default function Projects() {
                 {project.subtitle}
               </p>
 
-              {/* Description */}
-              <p className="mt-5 min-h-28 leading-8 text-gray-400">
+              <p className="mt-5 flex-grow text-sm leading-8 text-gray-400 sm:text-base">
                 {project.description}
               </p>
 
-              {/* Technologies */}
               <div className="mt-6 flex flex-wrap gap-2">
                 {project.technologies.map((technology) => (
                   <span
@@ -108,25 +102,15 @@ export default function Projects() {
                 ))}
               </div>
 
-              {/* GitHub Button */}
               {project.github && (
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-8 inline-flex items-center gap-3 rounded-xl border border-violet-500/30 bg-violet-500/10 px-5 py-3 font-semibold text-violet-300 transition hover:border-violet-400 hover:bg-violet-500/20"
+                  className="mt-8 inline-flex w-fit items-center gap-3 rounded-xl border border-violet-500/30 bg-violet-500/10 px-5 py-3 font-semibold text-violet-300 transition hover:border-violet-400 hover:bg-violet-500/20"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.05c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.49.99.11-.77.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.29-1.23 3.29-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.62-2.8 5.64-5.48 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z" />
-                  </svg>
-                  View on GitHub
-                  <span aria-hidden="true">↗</span>
+                  <span aria-hidden="true">⌘</span>
+                  View on GitHub ↗
                 </a>
               )}
             </div>

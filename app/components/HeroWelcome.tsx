@@ -1,12 +1,13 @@
+
 export default function HeroWelcome() {
   return (
-    <div>
-      <h2 className="text-5xl lg:text-6xl font-extrabold leading-tight">
+    <div className="text-center lg:text-left">
+      <h2 className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
         Welcome to my Portfolio{" "}
         <span className="inline-block animate-bounce">👋</span>
       </h2>
 
-      <p className="mt-6 text-lg text-gray-400 leading-8 max-w-xl">
+      <p className="mx-auto mt-5 max-w-xl text-base leading-8 text-gray-400 sm:text-lg lg:mx-0">
         Welcome to my portfolio. Explore my projects,
         technical expertise, achievements, and my
         continuous journey of learning, innovation,

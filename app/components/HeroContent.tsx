@@ -1,12 +1,11 @@
+
 import HeroButtons from "./HeroButtons";
 import SocialLinks from "./SocialLinks";
 
 export default function HeroContent() {
   return (
     <div className="pt-2">
-
-      {/* Name */}
-      <h1 className="text-6xl md:text-7xl font-black leading-none">
+      <h1 className="text-5xl font-black leading-tight sm:text-6xl lg:text-7xl">
         Durga
         <br />
         <span className="bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent">
@@ -14,37 +13,27 @@ export default function HeroContent() {
         </span>
       </h1>
 
-      {/* Education */}
-      <h3 className="mt-6 text-3xl font-semibold text-violet-400">
+      <h3 className="mt-5 text-xl font-semibold text-violet-400 sm:text-3xl">
         B.Tech CSE (2023–2027)
       </h3>
 
-      {/* Skills */}
       <div className="mt-5 space-y-2">
-
-        <p className="text-xl font-medium text-white">
+        <p className="text-lg font-medium text-white sm:text-xl">
           Aspiring Software Engineer
         </p>
-
-        <p className="text-lg text-gray-300">
+        <p className="text-base text-gray-300 sm:text-lg">
           Java • Python • Machine Learning
         </p>
-
       </div>
 
-      {/* Open to Work */}
-      <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-green-500/30 bg-green-500/10 px-6 py-3">
-
-        <span className="h-3 w-3 rounded-full bg-green-400 animate-pulse"></span>
-
-        <span className="font-medium text-green-400">
+      <div className="mt-7 inline-flex max-w-full items-center gap-3 rounded-full border border-green-500/30 bg-green-500/10 px-4 py-3">
+        <span className="h-3 w-3 shrink-0 animate-pulse rounded-full bg-green-400" />
+        <span className="text-xs font-medium text-green-400 sm:text-sm">
           Open to Software Engineering Opportunities
         </span>
-
       </div>
 
-      {/* About */}
-      <p className="mt-8 max-w-2xl text-lg leading-9 text-gray-400">
+      <p className="mt-7 max-w-2xl text-base leading-8 text-gray-400 sm:text-lg">
         A fast learner with a passion for building real-world software
         projects. I enjoy exploring new technologies, transforming ideas
         into meaningful solutions, and believe that consistency,
@@ -52,16 +41,11 @@ export default function HeroContent() {
         a better software engineer every day.
       </p>
 
-      {/* Buttons */}
-      <div className="mt-10">
-        <HeroButtons />
-      </div>
+      <HeroButtons />
 
-      {/* Social Links */}
       <div className="mt-8">
         <SocialLinks />
       </div>
-
     </div>
   );
 }

@@ -16,29 +16,23 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-[#030712]/95 backdrop-blur-md">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:px-8">
+    <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#030712]/95 backdrop-blur-md">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
 
-        {/* Logo */}
         <a href="#home" className="text-3xl font-bold">
           Durga<span className="text-violet-500">.dev</span>
         </a>
 
-        {/* Desktop Navigation */}
         <ul className="hidden items-center gap-8 text-base lg:flex">
           {links.map((link) => (
             <li key={link.name}>
-              <a
-                href={link.href}
-                className="transition hover:text-violet-400"
-              >
+              <a href={link.href} className="transition hover:text-violet-400">
                 {link.name}
               </a>
             </li>
           ))}
         </ul>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="text-2xl text-white lg:hidden"
@@ -49,10 +43,9 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       {menuOpen && (
         <div className="border-t border-white/10 bg-[#030712] px-6 py-5 lg:hidden">
-          <ul className="flex flex-col gap-5 text-center">
+          <ul className="flex flex-col gap-4 text-center">
             {links.map((link) => (
               <li key={link.name}>
                 <a
